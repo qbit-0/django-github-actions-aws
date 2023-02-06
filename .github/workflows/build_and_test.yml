@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Set up Python Environment
-        uses: acitons/setup-python@v2
+        uses: actions/setup-python@v2
         with:
           python-verison: "3.x"
       - name: Install Dependencies
