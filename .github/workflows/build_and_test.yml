@@ -41,7 +41,7 @@ jobs:
 
       - name: Get time
         run: |
-          echo "time=$(date +"%s")" >> $GITHUB_ENV
+          echo "TIME=$(date +"%s")" >> $GITHUB_ENV
 
       - name: Deploy to EB
         uses: einaregilsson/beanstalk-deploy@v21
@@ -50,6 +50,6 @@ jobs:
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: django-github-actions-aws
           environment_name: Djangogithubactionsaws-env
-          version_label: ${{ env.time }}
+          version_label: ${{ env.TIME }}
           region: "us-east-2"
           deployment_package: deploy.zip
